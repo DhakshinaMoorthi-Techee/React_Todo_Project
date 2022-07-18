@@ -1,0 +1,185 @@
+.box {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  padding: 50px;
+  border-radius: 5px;
+}
+
+.outer {
+  margin-top: 3%;
+}
+
+.headerTag {
+  text-align: center;
+  font-size: 6rem;
+  color: rgb(255, 221, 0);
+  background-color: #485461;
+  width: 80%;
+  margin: auto;
+  font-family: "Edu SA Beginner", cursive;
+}
+
+* {
+  background-color: #485461;
+  font-family: sans-serif;
+}
+
+.field {
+  width: 40%;
+  margin-left: 25%;
+}
+input {
+  width: 100%;
+  padding: 9px;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+}
+
+input:focus {
+  box-shadow: 0px 0px 3px 3px rgb(255, 221, 0);
+  transform: scale(1.025);
+}
+
+.but {
+  width: 20%;
+  margin-left: 3%;
+}
+
+.but button {
+  padding: 7px 15px;
+  background-color: rgb(255, 221, 0);
+  color: black;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+}
+
+.map {
+  width: 25%;
+  margin: 20px;
+  display: flex;
+  justify-content: space-around;
+  background-color: #485461;
+  border-radius: 8px;
+  padding: 10px;
+  border: 3px solid black;
+}
+
+.mapOne {
+  display: flex;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  font-family: sans-serif;
+  background-color: rgb(19, 9, 9);
+}
+
+.mapOne-striked {
+  display: flex;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  font-family: sans-serif;
+  background-color: rgb(19, 9, 9);
+ transition: 0.2s;
+  text-decoration: line-through;
+  opacity: 0.2;
+}
+
+.mapTwo {
+  display: flex;
+  justify-content: start;
+}
+
+.mapTwo > button {
+  padding: 7px 15px;
+  background-color: rgb(255, 221, 0);
+  color: black;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+}
+
+.mapTwo > button >img {
+  background-color: rgb(255, 221, 0);
+  cursor: pointer;
+}
+
+.mapIndex {
+  padding: 6px 10px;
+  display: flex;
+  justify-content: end;
+  color: white;
+  border:3px solid white;
+  border-radius: 20px;
+  font-family: "Edu SA Beginner", cursive;
+}
+
+.bottom {
+  padding-bottom: 141px;
+  width: 80%;
+  margin: auto;
+}
+
+.botton-empty {
+  text-align: center;
+  margin-top: 5%;
+  color: rgb(255, 221, 0);
+  font-family: "Edu SA Beginner", cursive;
+}
+
+.empty {
+  width: 10%;
+  margin-left: 46%;
+  cursor: pointer;
+  padding: 6px 15px;
+  border: none;
+  background-color: rgb(255, 221, 0);
+  color: black;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.map-body {
+  margin-left: 10%;
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+.map-outlet {
+  padding-bottom: 18%;
+}
+
+h2{
+  text-align: center;
+  font-family: "Edu SA Beginner", cursive;
+  color:rgb(218, 210, 210);
+}
+
+.top-record{
+  color:rgb(255, 221, 0);
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: "Edu SA Beginner", cursive;
+}
+
+.header-top{
+  display: flex;
+  justify-content: space-between;
+}
+.header-todo{
+  color:rgb(255, 221, 0);
+  font-family: "Edu SA Beginner", cursive;
+  font-size: 30px;
+}
+
+.headerTag:hover{
+  transform: scale(1.1);
+}
