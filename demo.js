@@ -10,7 +10,14 @@ const App = () => {
   const [date, setDate] = useState();
   const [mapIndex, setMapIndex] = useState([]);
   const setFocus = useRef(false);
-  const [className, setClassName] = useState("mapOne");
+  const [bodyStyle, setBodyStyle] = useState("body");
+  const [headerStyle, setHeaderStyle] = useState("headerTag");
+  const [timeStyle, setTimeStyle] = useState("timeStyle");
+  const [headerTodo, setHeaderTodo] = useState("header-todo");
+  const [topRecord, setTopRecord] = useState("top-record");
+  const [addButton, setAddButton] = useState("but");
+  const [mapBut, setMapBut] = useState("mapTwo");
+  const [dark, setDark] = useState(true);
 
   const onChange = (value) => {
     setFieldValue(value);
@@ -67,6 +74,28 @@ const App = () => {
         document.getElementById("input").value = "";
       }
     }
+  };
+
+  const onBlueYellow = () => {
+    setDark(true);
+    setBodyStyle("body");
+    setHeaderStyle("headerTag");
+    setTimeStyle("timeStyle");
+    setHeaderTodo("header-todo");
+    setTopRecord("top-record");
+    setAddButton("but");
+    setMapBut("mapTwo");
+  };
+
+  const onCyanWhite = () => {
+    setDark(false);
+    setBodyStyle("dark-body");
+    setHeaderStyle("dark-headerTag");
+    setTimeStyle("dark-timeStyle");
+    setHeaderTodo("dark-header-todo");
+    setTopRecord("dark-top-record");
+    setAddButton("dark-but");
+    setMapBut("dark-mapTwo");
   };
 
   const getDate = () => {
@@ -148,18 +177,46 @@ const App = () => {
   }, []);
 
   return (
-    <div className="body">
+    <div className={bodyStyle}>
       <div className="header-top">
-        <div className="header-todo">ToDo</div>
-        <div className="top-record">
-          Total Task : {array.length}
-          <br />
-          Total Task Done : {mapIndex.length}
+        <div className={headerTodo}>ToDo</div>
+        <div className="footer">
+          {!dark ? (
+            <>
+              <div className={topRecord}>
+                Total Task : {array.length}
+                <br />
+                Total Task Done : {mapIndex.length}
+              </div>
+              <img
+                className="dark1"
+                src="https://img.wallpapersafari.com/tablet/800/1280/9/7/tFi3g7.jpg"
+                alt="Blue and Yellow Color"
+                onClick={onBlueYellow}
+              />
+              <p className="dark">LIGHT</p>
+            </>
+          ) : (
+            <>
+              <div className={topRecord}>
+                Total Task : {array.length}
+                <br />
+                Total Task Done : {mapIndex.length}
+              </div>
+              <img
+                className="dark2"
+                src="https://www.color-hex.com/palettes/3646.png"
+                alt="Cyan and White Color"
+                onClick={onCyanWhite}
+              />
+              <p className="light">DARK</p>
+            </>
+          )}
         </div>
       </div>
       <div className="outer">
-        <h1 className="headerTag">Just do "ToDo"</h1>
-        <h2 className>{date}</h2>
+        <h1 className={headerStyle}>Just do "ToDo"</h1>
+        <h2 className={timeStyle}>{date}</h2>
         <div className="box">
           <div className="field">
             <input
@@ -172,7 +229,7 @@ const App = () => {
               autoComplete="off"
             />
           </div>
-          <div className="but">
+          <div className={addButton}>
             <button onClick={onButtonClick}>ADD</button>
           </div>
         </div>
@@ -190,19 +247,27 @@ const App = () => {
                     >
                       {item?.name.toUpperCase()}
                     </div>
-                    <div className="mapTwo">
+                    <div className={mapBut}>
                       <button onClick={() => onStrikeOut(item, item.id)}>
                         <TiTick
                           size="1.5rem"
-                          style={{ backgroundColor: "#ffdd00" }}
+                          style={
+                            mapBut == "mapTwo"
+                              ? { backgroundColor: "#ffdd00" }
+                              : { backgroundColor: "#fff" }
+                          }
                         />
                       </button>
                     </div>
-                    <div className="mapTwo">
+                    <div className={mapBut}>
                       <button onClick={() => onDeleteClick(item, item.id, i)}>
                         <MdDelete
                           size="1.5rem"
-                          style={{ backgroundColor: "#ffdd00" }}
+                          style={
+                            mapBut == "mapTwo"
+                              ? { backgroundColor: "#ffdd00" }
+                              : { backgroundColor: "#fff" }
+                          }
                         />
                       </button>
                     </div>
