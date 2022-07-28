@@ -14,15 +14,35 @@
   text-align: center;
   font-size: 6rem;
   color: rgb(255, 221, 0);
-  background-color: #485461;
   width: 80%;
   margin: auto;
   font-family: "Edu SA Beginner", cursive;
 }
 
-* {
+.dark-headerTag {
+  text-align: center;
+  font-size: 6rem;
+  color: white;
+  width: 80%;
+  margin: auto;
+  font-family: "Edu SA Beginner", cursive;
+}
+
+.dark-headerTag:hover {
+  transform: scale(0.9);
+}
+
+
+.body {
   background-color: #485461;
   font-family: sans-serif;
+  padding: 25px;
+}
+
+.dark-body {
+  background-color:#18958f;
+  font-family: sans-serif;
+  padding: 25px;
 }
 
 .field {
@@ -33,17 +53,22 @@ input {
   width: 100%;
   padding: 9px;
   border: none;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: grey;
   border-radius: 10px;
+  box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
 }
 
 input:focus {
-  box-shadow: 0px 0px 3px 3px rgb(255, 221, 0);
-  transform: scale(1.025);
+  outline: none;
 }
 
 .but {
+  width: 20%;
+  margin-left: 3%;
+}
+
+.dark-but {
   width: 20%;
   margin-left: 3%;
 }
@@ -58,15 +83,24 @@ input:focus {
   border: none;
 }
 
+.dark-but button {
+  padding: 7px 15px;
+  background-color:white;
+  color: #18958f;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+}
+
 .map {
   width: 25%;
   margin: 20px;
   display: flex;
   justify-content: space-around;
-  background-color: #485461;
   border-radius: 8px;
   padding: 10px;
-  border: 3px solid black;
+  box-shadow: 0px 0px 9px black;
 }
 
 .mapOne {
@@ -107,6 +141,26 @@ input:focus {
 
 .mapTwo > button >img {
   background-color: rgb(255, 221, 0);
+  cursor: pointer;
+}
+
+.dark-mapTwo {
+  display: flex;
+  justify-content: start;
+}
+
+.dark-mapTwo > button {
+  padding: 7px 15px;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+}
+
+.dark-mapTwo > button >img {
+  background-color: white;
   cursor: pointer;
 }
 
@@ -154,17 +208,30 @@ input:focus {
 }
 
 .map-outlet {
-  padding-bottom: 18%;
+  padding-bottom: 19%;
 }
 
-h2{
+.timeStyle{
   text-align: center;
   font-family: "Edu SA Beginner", cursive;
-  color:rgb(218, 210, 210);
+  color:rgb(227, 197, 4);
+}
+
+.dark-timeStyle{
+  text-align: center;
+  font-family: "Edu SA Beginner", cursive;
+  color:beige;
 }
 
 .top-record{
   color:rgb(255, 221, 0);
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: "Edu SA Beginner", cursive;
+}
+
+.dark-top-record{
+  color:white;
   font-weight: 600;
   font-size: 1rem;
   font-family: "Edu SA Beginner", cursive;
@@ -180,6 +247,49 @@ h2{
   font-size: 30px;
 }
 
+.dark-header-todo{
+  color:white;
+  font-family: "Edu SA Beginner", cursive;
+  font-size: 30px;
+}
+
 .headerTag:hover{
-  transform: scale(1.1);
+  transform: scale(0.9);
+}
+
+.footer{
+  display: flex;
+  justify-content:end;
+}
+
+.dark1{
+  width: 50px;
+  border-radius: 15px;
+  height: 50px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.dark2{
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.dark {
+  writing-mode: vertical-rl;
+  padding-top: 5px;
+  margin-left: 1px;
+  font-weight: 540;
+  color:white;
+}
+
+.light {
+  writing-mode: vertical-rl;
+  padding-top: 5px;
+  margin-left: 1px;
+  font-weight: 540;
+  color: rgb(255, 221, 0);
 }
